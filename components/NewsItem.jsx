@@ -3,7 +3,7 @@ export default function NewsItem({ news }) {
   return (
     <div>
       <Typography>
-        {news.name}
+        {news}
       </Typography>
     </div>
   )
