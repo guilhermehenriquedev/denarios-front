@@ -13,10 +13,7 @@
     "@material-ui/core": "^5.0.0-beta.5",
     "@material-ui/icons": "^4.11.2",
     "axios": "^0.25.0",
-<<<<<<< HEAD
-=======
     "cors": "^2.8.5",
->>>>>>> d83e020cd4f8152b291116efb36f47c77757eaab
     "next": "12.0.8",
     "react": "17.0.2",
     "react-dom": "17.0.2"

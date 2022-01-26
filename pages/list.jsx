@@ -2,7 +2,7 @@ import { API_URL } from '@/config/index'
 import Grid from '@material-ui/core/Grid'
 import NewsItem from '@/components/NewsItem'
 export default function Lists({ news }) {
-  console.log('data....: ', news.data[0])
+  console.log('data....: ', news.data)
   return (
     <div>
       <Grid pb={4} container spacing={7} alignItems="flex-center" justifyContent="center">
@@ -13,9 +13,9 @@ export default function Lists({ news }) {
             item
             xs={10}
             md={3}
-            key={item.data}
+            key={item}
           >
-            {<NewsItem news={item.data} />}
+            <NewsItem news={item} />
           </Grid>
         ))
         }

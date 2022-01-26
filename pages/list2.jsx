@@ -6,16 +6,16 @@ export default function App() {
 
   useEffect(() => {
     api
-      .get("/users/cairofelipedev")
+      .get("/api/exchanges/list/")
       .then((response) => setUser(response.data))
       .catch((err) => {
         console.error("ops! ocorreu um erro" + err);
       });
   }, []);
-
+  console.log(user?.data[0]);
   return (
     <div className="App">
-      <p>Usuário: {user?.login}</p>
+      <p>Moeda: {user?.data[0].no_cripto}</p>
     </div>
   );
 }
