@@ -17,6 +17,7 @@ function MyApp() {
       try {
         const response = await api.get("/exchanges/list/");
         setCrypto(response.data);
+        console.log('response.....: ', response.data)
       } catch (err) {
         console.error(err);
       }
@@ -47,7 +48,7 @@ function MyApp() {
           {theme.palette.mode === 'dark' ? <Brightness7Icon /> : <Brightness4Icon />}
         </IconButton>
         <div>
-          {cryptos.data.map(item => (
+          {cryptos.data.binance.map(item => (
             <div key={item.no_cripto}>
               <h2>{item.no_cripto}</h2>
               <span>{item.vl_compra}</span>
