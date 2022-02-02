@@ -67,7 +67,7 @@ function MyApp() {
             </IconButton>
           </Box>
           <Box>
-            <Typography variant="h6" component="div" sx={{ flexGrow: 1 }}>
+            <Typography variant="h2"  component="div" sx={{ flexGrow: 1 }}>
               Denários
             </Typography>
           </Box>
