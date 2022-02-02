@@ -20,8 +20,7 @@ export default function ButtonAppBar() {
         <Toolbar>
           <IconButton
             size="large"
-            edge="start"
-
+           
             aria-label="menu"
             sx={{ mr: 2 }}
           >

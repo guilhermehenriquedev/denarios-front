@@ -2,10 +2,14 @@ import React, { useState, useEffect } from "react";
 import api from "@/config/api.jsx";
 import AppBar from '@/components/AppBar'
 import IconButton from '@material-ui/core/IconButton';
+import Button from '@material-ui/core/Button';
 import Box from '@material-ui/core/Box';
+import Typography from '@material-ui/core/Typography';
 import { useTheme, ThemeProvider, createTheme } from '@material-ui/core/styles';
 import Brightness4Icon from '@material-ui/icons/Brightness4';
 import Brightness7Icon from '@material-ui/icons/Brightness7';
+import MenuIcon from '@material-ui/icons/Menu';
+import styles from '@/styles/main.module.scss'
 
 const ColorModeContext = React.createContext({ toggleColorMode: () => { } });
 
@@ -43,18 +47,50 @@ function MyApp() {
           p: 3,
         }}
       >
-        <AppBar/>
+        <IconButton
+          size="large"
+
+          aria-label="menu"
+          sx={{ mr: 2 }}
+        >
+          <MenuIcon />
+        </IconButton>
+        <Typography variant="h6" component="div" sx={{ flexGrow: 1 }}>
+          Denários
+        </Typography>
+        <Button color="inherit">Login</Button>
         <IconButton sx={{ ml: 1 }} onClick={colorMode.toggleColorMode} color="inherit">
           {theme.palette.mode === 'dark' ? <Brightness7Icon /> : <Brightness4Icon />}
         </IconButton>
-        <div>
-          {cryptos.data.binance.map(item => (
-            <div key={item.no_cripto}>
-              <h2>{item.no_cripto}</h2>
-              <span>{item.vl_compra}</span>
-              <span>{item.vl_venda}</span>
-            </div>
-          ))}
+        <div className={styles.container}>
+          <Typography variant="h1" component="div" sx={{ flexGrow: 1 }}>
+            Binance
+          </Typography>
+          <div>
+            {cryptos.data.binance.map(item => (
+              <div key={item.no_cripto}>
+                <h2>{item.no_cripto}</h2>
+                <span>{item.vl_compra}</span>
+                <span>{item.vl_venda}</span>
+              </div>
+            ))}
+
+          </div>
+        </div>
+        <div className={styles.container}>
+          <Typography variant="h1" component="div" sx={{ flexGrow: 1 }}>
+            BrasilBitcoin
+          </Typography>
+          <div>
+            {cryptos.data.brasilbitcoin.map(item => (
+              <div key={item.no_cripto}>
+                <h2>{item.no_cripto}</h2>
+                <span>{item.vl_compra}</span>
+                <span>{item.vl_venda}</span>
+              </div>
+            ))}
+
+          </div>
         </div>
       </Box>
     </>
