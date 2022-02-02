@@ -47,21 +47,37 @@ function MyApp() {
           p: 3,
         }}
       >
-        <IconButton
-          size="large"
-
-          aria-label="menu"
-          sx={{ mr: 2 }}
+        <Box
+          sx={{
+            display: 'flex',
+            justifyContent: 'space-between',
+            p: 1,
+            m: 1,
+            bgcolor: 'background.paper',
+          }}
         >
-          <MenuIcon />
-        </IconButton>
-        <Typography variant="h6" component="div" sx={{ flexGrow: 1 }}>
-          Denários
-        </Typography>
-        <Button color="inherit">Login</Button>
-        <IconButton sx={{ ml: 1 }} onClick={colorMode.toggleColorMode} color="inherit">
-          {theme.palette.mode === 'dark' ? <Brightness7Icon /> : <Brightness4Icon />}
-        </IconButton>
+          <Box>
+            <IconButton
+              size="large"
+
+              aria-label="menu"
+              sx={{ mr: 2 }}
+            >
+              <MenuIcon />
+            </IconButton>
+          </Box>
+          <Box>
+            <Typography variant="h6" component="div" sx={{ flexGrow: 1 }}>
+              Denários
+            </Typography>
+          </Box>
+          <Box>
+            <Button color="inherit">Login</Button>
+            <IconButton sx={{ ml: 1 }} onClick={colorMode.toggleColorMode} color="inherit">
+              {theme.palette.mode === 'dark' ? <Brightness7Icon /> : <Brightness4Icon />}
+            </IconButton>
+          </Box>
+        </Box>
         <div className={styles.container}>
           <Typography variant="h1" component="div" sx={{ flexGrow: 1 }}>
             Binance
