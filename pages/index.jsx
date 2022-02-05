@@ -101,10 +101,11 @@ function MyApp() {
                 item
                 xs={4}
                 md={2}
+                key={item.no_cripto}
               >
-                <Container key={item.no_cripto}>
-                  <h2>{item.no_cripto}</h2>
-                </Container>
+                <Typography variant="h2">
+                  {item.no_cripto}
+                </Typography>
               </Grid>
             ))}
           </Grid>
@@ -132,13 +133,15 @@ function MyApp() {
           <Grid container spacing={2}>
             {cryptos.data.brasilbitcoin.map(item => (
               <Grid
+                container
                 item
                 xs={4}
                 md={2}
+                key={item.no_cripto}
               >
-                <Container key={item.no_cripto}>
-                  <h2>{item.no_cripto}</h2>
-                </Container>
+                <Typography variant="h2">
+                  {item.no_cripto}
+                </Typography>
               </Grid>
             ))}
           </Grid>
