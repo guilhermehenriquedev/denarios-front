@@ -102,10 +102,8 @@ function MyApp() {
                 xs={4}
                 md={2}
               >
-                <Container key={item}>
+                <Container key={item.no_cripto}>
                   <h2>{item.no_cripto}</h2>
-                  <span>{item.vl_compra}</span>
-                  <span>{item.vl_venda}</span>
                 </Container>
               </Grid>
             ))}
@@ -138,12 +136,8 @@ function MyApp() {
                 xs={4}
                 md={2}
               >
-                <Container>
-                  <div key={item.no_cripto}>
-                    <h2>{item.no_cripto}</h2>
-                    <span>{item.vl_compra}</span>
-                    <span>{item.vl_venda}</span>
-                  </div>
+                <Container key={item.no_cripto}>
+                  <h2>{item.no_cripto}</h2>
                 </Container>
               </Grid>
             ))}
