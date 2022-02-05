@@ -20,7 +20,8 @@ const ColorModeContext = React.createContext({ toggleColorMode: () => { } });
 
 function MyApp() {
   const [cryptos, setCrypto] = useState([]);
-
+  const theme = useTheme();
+  const colorMode = React.useContext(ColorModeContext);
   useEffect(() => {
     async function loadCryptos() {
       try {
@@ -37,8 +38,7 @@ function MyApp() {
   if (cryptos.length == 0) {
     return null;
   }
-  const theme = useTheme();
-  const colorMode = React.useContext(ColorModeContext);
+
   return (
     <>
       <GlobalStyles styles={{ ul: { margin: 0, padding: 0, listStyle: 'none' } }} />

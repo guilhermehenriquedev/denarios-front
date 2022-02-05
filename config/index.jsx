@@ -1,0 +1,1 @@
+export const API_URL = process.env.NEXTJS_PUBLIC_URL || "https://denarios.herokuapp.com"
