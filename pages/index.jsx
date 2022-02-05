@@ -93,7 +93,7 @@ function MyApp() {
           xs={12}
           md={8}
         >
-          <Grid container spacing={2}>
+          <Grid container spacing={2} >
             {cryptos.data.binance.map(item => (
               <Grid
                 container
@@ -114,7 +114,7 @@ function MyApp() {
         </Grid>
       </Grid>
       <hr></hr>
-      <Grid container spacing={2}>
+      <Grid container spacing={2} p={4}>
         <Grid
           item
           xs={12}
