@@ -103,9 +103,11 @@ function MyApp() {
                 md={2}
                 key={item.no_cripto}
               >
-                <Typography variant="h2">
-                  {item.no_cripto}
-                </Typography>
+                <Container>
+                  <h2>{item.no_cripto}</h2>
+                  <span>{item.vl_compra}</span>
+                  <span>{item.vl_venda}</span>
+                </Container>
               </Grid>
             ))}
           </Grid>
@@ -139,9 +141,11 @@ function MyApp() {
                 md={2}
                 key={item.no_cripto}
               >
-                <Typography variant="h2">
-                  {item.no_cripto}
-                </Typography>
+                <Container>
+                  <h2>{item.no_cripto}</h2>
+                  <span>{item.vl_compra}</span>
+                  <span>{item.vl_venda}</span>
+                </Container>
               </Grid>
             ))}
           </Grid>
