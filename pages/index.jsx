@@ -12,6 +12,7 @@ import Brightness7Icon from '@material-ui/icons/Brightness7';
 import Grid from '@material-ui/core/Grid'
 import Container from '@material-ui/core/Container'
 import NavDrawer from '@/components/NavBar'
+import SearchBar from '@/components/SearchBar'
 import Image from 'next/image'
 import styles from '@/styles/main.module.scss'
 
@@ -73,7 +74,8 @@ function MyApp() {
           </IconButton>
         </Box>
       </Box>
-      <Grid container spacing={2}>
+      <SearchBar/>
+      <Grid container spacing={2} p={4}>
         <Grid
           item
           xs={12}
@@ -100,7 +102,7 @@ function MyApp() {
                 md={2}
               >
                 <Container>
-                  <div key={item.no_cripto}>
+                  <div className={styles.cryptoCard} key={item.no_cripto}>
                     <h2>{item.no_cripto}</h2>
                     <span>{item.vl_compra}</span>
                     <span>{item.vl_venda}</span>
@@ -111,6 +113,7 @@ function MyApp() {
           </Grid>
         </Grid>
       </Grid>
+      <hr></hr>
       <Grid container spacing={2}>
         <Grid
           item
@@ -122,7 +125,7 @@ function MyApp() {
             justifyContent: 'center',
           }}
         >
-          <Image src="/brasilbitcoin.png" height={70} width={350} />
+          <Image src="/brasilbitcoin.svg" height={70} width={350} />
         </Grid>
         <Grid
           item
