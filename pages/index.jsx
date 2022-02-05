@@ -22,6 +22,7 @@ function MyApp() {
   const [cryptos, setCrypto] = useState([]);
   const theme = useTheme();
   const colorMode = React.useContext(ColorModeContext);
+  
   useEffect(() => {
     async function loadCryptos() {
       try {
@@ -101,8 +102,8 @@ function MyApp() {
                 xs={4}
                 md={2}
               >
-                <Container>
-                  <div className={styles.cryptoCard} key={item.no_cripto}>
+                <Container key={item.no_cripto}>
+                  <div className={styles.cryptoCard}>
                     <h2>{item.no_cripto}</h2>
                     <span>{item.vl_compra}</span>
                     <span>{item.vl_venda}</span>
