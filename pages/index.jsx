@@ -105,8 +105,9 @@ function MyApp() {
               >
                 <Container>
                   <h2>{item.no_cripto}</h2>
-                  <span>{item.vl_compra}</span>
-                  <span>{item.vl_venda}</span>
+                  <span>Compra: {item.vl_compra}</span>
+                  <br></br>
+                  <span>Venda: {item.vl_venda}</span>
                 </Container>
               </Grid>
             ))}
@@ -143,8 +144,9 @@ function MyApp() {
               >
                 <Container>
                   <h2>{item.no_cripto}</h2>
-                  <span>{item.vl_compra}</span>
-                  <span>{item.vl_venda}</span>
+                  <span>Compra: {item.vl_compra}</span>
+                  <br></br>
+                  <span>Venda: {item.vl_venda}</span>
                 </Container>
               </Grid>
             ))}
